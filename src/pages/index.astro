@@ -1,5 +1,4 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
@@ -7,5 +6,207 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout>
-	<Welcome />
+	<div class="presentation">
+		<div class="hello">
+			<div class="">
+				<div class="">
+					<span>¡Hola! Soy</span>
+					<span class="name">Daniel Alejandro Chavez Bustos</span>
+					<span>Desarrollador full-stack</span>
+				</div>
+				<div class="conocer_mas_container">
+					<button class="conocer_mas_btn">C:\>conocer-mas</button>
+				</div>
+			</div>
+		</div>
+		<div class="image_section">
+			<div class="image_frame"></div>	
+		</div>
+	</div>
+
+	<section class="about_me">
+		<div class="text-container">
+			<span class="title">¿Quién soy?</span>
+			<!-- <span>
+				Técnico en Programación de Software | Estudiante de Ingeniería de Sistemas | Desarrollador Web
+			</span> -->
+			<p class="paragrpah">
+				Soy estudiante activo de Ingeniería de Sistemas en la Universidad Distrital Francisco José de Caldas, cuento
+				con más de 3 años de experiencia laboral en desarrollo web con un enfoque en la creación de soluciones
+				eficientes y escalables. <br><br>
+				
+				A lo largo de mi formación profesional, he adquirido experiencia en lenguajes de programación como
+				JavaScript, PHP y Java, así como en frameworks y bibliotecas de frontend, incluyendo Angular, React y
+				Laravel. En el ámbito del desarrollo backend, he trabajado con tecnologías como Express, NestJS y Spring Boot.
+				Esta trayectoria me ha permitido desarrollar aplicaciones robustas, escalables y con una
+				arquitectura bien estructurada. <br><br>
+				
+				A futuro, aspiro en desempeñarme como Senior en la administración y gestión de proyectos de TI,
+				así como en la optimización de procesos mediante el desarrollo de software, con el objetivo de aportar
+				soluciones innovadoras en empresas de alto nivel. Me caracterizo por estar en constante búsqueda de nuevos
+				retos y oportunidades que me permitan fortalecer mis habilidades en el diseño, desarrollo e
+				implementación de soluciones tecnológicas. 🚀
+			</p>
+		</div>
+	
+		<div class="text-container">
+			<span class="title">Tecnologías y Herramientas</span>
+			<p>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa totam facilis, ab ipsam incidunt nihil suscipit. Nam reprehenderit commodi quam minima est molestias magnam earum, facilis tenetur nobis aliquam magni.
+			</p>
+		</div>
+	
+		<div class="text-container">
+			<span class="title">Portafolio</span>
+			<p>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa totam facilis, ab ipsam incidunt nihil suscipit. Nam reprehenderit commodi quam minima est molestias magnam earum, facilis tenetur nobis aliquam magni.
+			</p>
+		</div>
+	
+		<div class="text-container">
+			<span class="title">Hobbies</span>
+			<p>
+				Fuera del mundo académico y del area de tecnológica, mi vida ha estado llena de toda expresión artística.
+				La música y las disciplnias relacionadas al circo son mi segunda actividad, en la que también he llegado a
+				trabajar y desempeñarme en distintos lugares y roles, la experiencia que me queda de estos espacios también
+				ha contribuído en mi forma de comunicar ideas y cómo tratar a las personas en proyectos de desarrollo de
+				software o como bien se le llama "softskills".
+			</p>
+		</div>
+	</section>
+	
 </Layout>
+
+<style>
+
+	.presentation {
+		padding: 2em 0;
+		width: 100%;
+		display: flex;
+		background-color: #000;
+		border-radius: 20px;
+		box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+	}
+
+	.hello {
+		width: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: start;
+		color: #fff;
+		padding-left: 3em;
+	}
+
+	.image_section {
+		width: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: end;
+		padding-right: 3em;
+	}
+
+	@keyframes cursor-blink {
+  		0% {
+    		opacity: 0;
+  		}
+	}
+
+	.name { 
+		margin: 0;
+		display: block;
+		font-size: 2em;
+		font-weight: bold;
+	}
+
+	.name::after {
+  		content: "";
+ 		width: 	20px;
+  		height: 5px;
+		margin-left: 5px;
+  		background-color: #fff;
+  		display: inline-block;
+		opacity: 100%;
+		animation: cursor-blink 1.5s steps(2) infinite;
+	}
+
+	.image_frame {
+		width: 280px; /** pasar a 225 en el breakpont 768px */
+		height: 280px; /** pasar a 225 en el breakpont 768px */
+		border-radius: 100%;
+		background-image: url(https://i1.sndcdn.com/avatars-d0AmrTFbOe70Oh9g-Jozepg-t500x500.jpg);
+	}
+
+	.conocer_mas_container {
+		margin-top: 15px;
+	}
+
+	.conocer_mas_btn {
+		background-color: #000;
+		border: #fff solid 1px;
+		border-radius: 10px;
+		padding: 10px 20px;
+		color: #fff;
+		text-align: center;
+		text-decoration: none;
+		font-size: 1em;
+		transition: 250ms;
+	}
+
+	.conocer_mas_btn:hover {
+		background-color: #fff;
+		border: #000 solid 1px;
+		color: #000;
+		transition: 250ms;
+	}
+
+	.text-container { 
+		color: #fff;
+		margin-top: 2em;
+	}
+
+	.text-container .title { 
+		display: block;
+		font-weight: bolder;
+		font-size: 1.5em;
+		padding-bottom: 5px;
+		border-bottom: #fff solid 1px;
+	}
+
+	@media (max-width: 768px) {
+
+		.presentation {
+			align-items: center;
+			flex-direction: column-reverse;
+		}
+
+		.name { 
+			font-size: 1.8em;
+		}
+
+		.hello {
+			width: 100%;
+			display: flex;
+			justify-content: center;
+			color: #fff;
+			padding: 0;
+			text-align: center;
+		}
+
+		.hello div {
+			padding: 0 1em;
+		}
+
+		.image_section {
+			width: 100%;
+			justify-content: center;
+			padding: 0;
+			margin-bottom: 1.5em;
+		}
+
+		.image_frame {
+			width: 150px;
+			height: 150px;
+		}
+	}
+
+</style>

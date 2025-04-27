@@ -1,0 +1,161 @@
+<div class="header">
+    <div class="menu_container">
+        <div class="logo"><span>Alejandro Chavez</span></div>
+        <div class="menu">
+            <a href="" class="menu_item">Inicio</a>
+            <a href="" class="menu_item">Portafolio</a>
+            <a href="" class="menu_item">Blog</a>
+            <a href="" class="menu_item">Contacto</a>
+        </div>
+        <div class="links">
+            <a href="" class="link_item"><i class="bi bi-github"></i></a>
+            <a href="" class="link_item"><i class="bi bi-linkedin"></i></a>
+            <a href="" class="link_item"><i class="bi bi-instagram"></i></a>
+        </div>
+        <div class="menu_wrapped">
+            <i class="bi bi-list"></i>
+        </div>
+    </div>
+</div>
+
+<style>
+    .header {
+        width: 100%;
+        background-color: var(--color-primary);
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        backdrop-filter: blur(13.4px);
+        -webkit-backdrop-filter: blur(13.4px);
+        background: var(--color-primary-rgba);
+        position: sticky;
+        top: 0;
+        z-index: 2;
+    }
+
+    .menu_container {
+        width: var(--header-normal-creen-widht);
+        height: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .menu_wrapped {
+        display: none;
+    }
+
+    .logo {
+        height: 100%;
+        width: 20%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #203946;
+        min-width: 190.2px;
+    }
+
+    .menu {
+        height: 100%;
+        width: 60%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .menu_item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 25px;
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .link_item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .menu_item:hover {
+        background-color: var(--color-primary);
+        transition: 250ms;
+    }
+
+    .links {
+        height: 100%;
+        background-color: #203946;
+        width: 20%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        min-width: 190.2px;
+    }
+
+    span {
+        color: #fff;
+    }
+
+    @media (max-width: 1200px) {
+		.menu_container {
+            width: 80%;
+        }
+	}
+
+    @media (max-width: 992px) {
+        
+        .menu_container {
+            justify-content: space-between;
+        }
+
+        .logo {
+            height: 100%;
+            width: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #203946;
+            min-width: none;
+            max-width: 190.2px;
+        }
+
+		.menu {
+            display: none;
+        }
+
+        .links {
+            display: none;
+        }
+
+        .menu_wrapped {
+            height: 100%;
+            width: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: end;
+            min-width: none;
+            max-width: 190.2px;
+        }
+
+        .menu_wrapped i {
+            color: #fff;
+            font-size: 2em;
+        }
+
+        .menu_wrapped i:hover { 
+            cursor: pointer;
+        }
+	}
+
+
+    @media (max-width: 566px) {
+		.menu_container {
+			width: 100%;
+		}
+
+        .menu_wrapped i {
+            margin-right: 25px
+        }
+	}
+</style>
