@@ -51,9 +51,66 @@ import Layout from '../layouts/Layout.astro';
 	
 		<div class="text-container">
 			<span class="title">Tecnologías y Herramientas</span>
-			<p>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa totam facilis, ab ipsam incidunt nihil suscipit. Nam reprehenderit commodi quam minima est molestias magnam earum, facilis tenetur nobis aliquam magni.
-			</p>
+			<div class="row">
+				<div class="technologie_card">
+					<span class="technologie_card_title">Frontend</span>
+					<div class="technologie_card_item_container">
+						<div class="technologie_card_ciruclar_item">
+							<span style="color: #000">Angular</span>
+						</div>
+						<div class="technologie_card_ciruclar_item">
+							<span style="color: #000">Laravel</span>
+						</div>
+						<div class="technologie_card_ciruclar_item">
+							<span style="color: #000">React</span>
+						</div>
+					</div>
+				</div>
+				<div class="technologie_card">
+					<span class="technologie_card_title">Backend</span>
+					<div class="technologie_card_item_container">
+						<div class="technologie_card_ciruclar_item">
+							<span style="color: #000">nodeJS</span>
+						</div>
+						<div class="technologie_card_ciruclar_item">
+							<span style="color: #000">NestJS</span>
+						</div>
+						<div class="technologie_card_ciruclar_item">
+							<span style="color: #000">Spring</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="technologie_card">
+					<span class="technologie_card_title">DBMS</span>
+					<div class="technologie_card_item_container">
+						<div class="technologie_card_ciruclar_item">
+							<span style="color: #000">Angular</span>
+						</div>
+						<div class="technologie_card_ciruclar_item">
+							<span style="color: #000">Laravel</span>
+						</div>
+						<div class="technologie_card_ciruclar_item">
+							<span style="color: #000">React</span>
+						</div>
+					</div>
+				</div>
+				<div class="technologie_card">
+					<span class="technologie_card_title">Otras Herramientas</span>
+					<div class="technologie_card_item_container">
+						<div class="technologie_card_ciruclar_item">
+							<span style="color: #000">nodeJS</span>
+						</div>
+						<div class="technologie_card_ciruclar_item">
+							<span style="color: #000">NestJS</span>
+						</div>
+						<div class="technologie_card_ciruclar_item">
+							<span style="color: #000">Spring</span>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	
 		<div class="text-container">
@@ -86,6 +143,7 @@ import Layout from '../layouts/Layout.astro';
 		background-color: #000;
 		border-radius: 20px;
 		box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+		box-sizing: border-box;
 	}
 
 	.hello {
@@ -170,6 +228,45 @@ import Layout from '../layouts/Layout.astro';
 		font-size: 1.5em;
 		padding-bottom: 5px;
 		border-bottom: #fff solid 1px;
+	}
+
+	.text-container .row { 
+		margin-top: 1em;
+		display: flex;
+	}
+
+	.technologie_card {
+		display: flex;
+		justify-content:center;
+		align-items: center;
+		flex-direction: column;
+		background-color: var(--color-3);
+		width:50%;
+		margin: 10px 5px 10px 10px;
+		border-radius: 20px;
+		padding:20px 0;
+		box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+	}
+
+	.technologie_card_item_container {
+		margin-top: 1em;
+		display: flex;
+		justify-content: center;
+	}
+
+	.technologie_card_ciruclar_item { 
+		background-color: #fff;
+		width:100px;
+		margin: 0 10px;
+		border-radius: 100%;
+		aspect-ratio : 1 / 1;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.technologie_card_title {
+		font-size: 1.4em;
 	}
 
 	@media (max-width: 768px) {
